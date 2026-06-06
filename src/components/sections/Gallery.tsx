@@ -10,6 +10,7 @@ import SectionTeaser from "@/components/effects/SectionTeaser";
 export default function Gallery() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   useGSAP(() => {
     gsap.fromTo(".gallery-img",
@@ -20,7 +21,9 @@ export default function Gallery() {
         scrollTrigger: { trigger: containerRef.current, start: "top 75%" },
       }
     );
-  }, { scope: containerRef });
+  }, [showAll]); // Re-run triggers if needed when gallery expands
+
+  const visibleImages = showAll ? coupleData.gallery : coupleData.gallery.slice(0, 3);
 
   return (
     <section ref={containerRef} className="relative py-32 overflow-hidden"
@@ -48,14 +51,14 @@ export default function Gallery() {
           </div>
         </div>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
-          {coupleData.gallery.map((src, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+          {visibleImages.map((src, index) => (
             <div
               key={index}
-              className="gallery-img inline-block w-full mb-6 relative overflow-hidden rounded-2xl cursor-pointer group break-inside-avoid p-2 bg-white/95 border border-gold/20 transition-all duration-500 shadow-[0_4px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_24px_rgba(107,168,122,0.12)] hover:scale-[1.02] hover:border-gold/50"
+              className="gallery-img w-full relative overflow-hidden rounded-2xl cursor-pointer group p-2 bg-white/95 border border-gold/20 transition-all duration-500 shadow-[0_4px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_24px_rgba(107,168,122,0.12)] hover:scale-[1.02] hover:border-gold/50"
               onClick={() => setSelectedImage(src)}
             >
-              <div className="relative overflow-hidden rounded-xl">
+              <div className="relative overflow-hidden rounded-xl aspect-[3/4]">
                 {/* Gentle overlay */}
                 <div className="absolute inset-0 bg-black/[0.03] group-hover:bg-transparent transition-colors duration-500 z-10" />
                 {/* Image number on hover */}
@@ -65,13 +68,26 @@ export default function Gallery() {
                 <Image
                   src={src}
                   alt={`Gallery Image ${index + 1}`}
-                  width={800} height={1200}
-                  className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                 />
               </div>
             </div>
           ))}
         </div>
+
+        {/* View More Button */}
+        {!showAll && coupleData.gallery.length > 3 && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={() => setShowAll(true)}
+              className="px-8 py-3 bg-gradient-to-r from-sage to-gold hover:from-gold hover:to-sage text-white font-sans text-xs tracking-widest uppercase rounded-full shadow-md hover:shadow-lg transition-all duration-500 transform hover:-translate-y-0.5 cursor-pointer"
+            >
+              View More
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Lightbox */}

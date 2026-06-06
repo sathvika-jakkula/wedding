@@ -75,20 +75,20 @@ export default function Countdown() {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8 md:gap-14">
+        <div className="flex justify-center gap-2.5 xs:gap-4 sm:gap-8 md:gap-14 px-2">
           {Object.entries(timeLeft).map(([unit, value]) => (
             <div key={unit} className="countdown-box flex flex-col items-center">
               <div className="relative mb-5">
                 {/* Outer decorative ring */}
-                <div className="absolute inset-0 rounded-full border border-sage/15" style={{ margin: "-8px" }} />
-                <div className="countdown-ring w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-sage/30 flex items-center justify-center backdrop-blur-sm"
+                <div className="absolute -inset-1 sm:-inset-2 rounded-full border border-sage/15" />
+                <div className="countdown-ring w-16 h-16 xs:w-20 xs:h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full border border-sage/30 flex items-center justify-center backdrop-blur-sm"
                   style={{ background: "rgba(255,255,255,0.7)" }}>
-                  <span className="font-serif text-4xl md:text-5xl text-[#1a3020]">
+                  <span className="font-serif text-xl xs:text-2xl sm:text-4xl md:text-5xl text-[#1a3020]">
                     {value.toString().padStart(2, "0")}
                   </span>
                 </div>
               </div>
-              <span className="font-sans text-[10px] md:text-xs tracking-[0.4em] uppercase text-[#1a3020]/55">
+              <span className="font-sans text-[8px] sm:text-[10px] md:text-xs tracking-[0.2em] sm:tracking-[0.4em] uppercase text-[#1a3020]/55">
                 {unit}
               </span>
             </div>

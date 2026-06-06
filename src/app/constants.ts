@@ -32,8 +32,8 @@ export const coupleData = {
   locationFull: "R.R. Garden's, Mathangi Colony, FCI X Road, Godhavarkhani, Mdl Ramagundam, Peddapally Dist.",
   gallery: [
     "/romantic_wall.jpeg",
-    "/moonlight_walk.jpeg",
     "/boat_ride_2.jpeg",
+    "/romantic_outdoor.jpeg",
     "/stone_archway.jpeg",
     "/window_silhouette.jpeg",
     "/romantic_lights_2.jpeg",
