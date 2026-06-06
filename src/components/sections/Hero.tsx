@@ -301,7 +301,7 @@ export default function Hero() {
             <div className="relative z-10 w-full max-w-3xl rounded-2xl overflow-hidden border border-sage/20 shadow-[0_0_80px_rgba(0,0,0,0.8),0_0_40px_rgba(107,168,122,0.1)]">
               <video
                 ref={videoRef}
-                src="/A_cinematic_text_driven_tradi.mp4"
+                src="/download (2).mp4"
                 className="w-full aspect-video object-cover block"
                 playsInline
               />

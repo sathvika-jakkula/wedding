@@ -14,6 +14,7 @@ import Finale from "@/components/sections/Finale";
 import Footer from "@/components/sections/Footer";
 import CursorGlow from "@/components/effects/CursorGlow";
 import FloatingParticles from "@/components/effects/FloatingParticles";
+import MusicPlayer from "@/components/effects/MusicPlayer";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -28,6 +29,7 @@ export default function Home() {
       ) : (
         <>
           <FloatingParticles />
+          <MusicPlayer />
           <Hero />
           <TheCouple />
           <MoonlightRomance />
