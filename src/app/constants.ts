@@ -1,5 +1,5 @@
 export const coupleData = {
-  names: "Harinika & Shashank",
+  names: "Shashank & Harinika",
   story: [
     {
       year: "2020",

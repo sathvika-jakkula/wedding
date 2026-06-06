@@ -169,7 +169,7 @@ export default function Hero() {
           >
             {/* Monogram — Great Vibes Script Monogram with Moving Shimmer Gradient */}
             <div className="font-script select-none leading-none text-center px-12 py-4 mb-6 shimmer-text" style={{ fontSize: "clamp(4.5rem, 12vw, 8.5rem)" }}>
-              H &amp; S
+              S &amp; H
             </div>
 
             <p className="font-sans text-[9px] tracking-[0.5em] text-beige/35 uppercase mb-12">
@@ -314,7 +314,7 @@ export default function Hero() {
             <h1 className="flex flex-col items-center mb-4 leading-none">
               <span className="hero-title-word font-script shimmer-text opacity-0 block"
                 style={{ fontSize: "clamp(3rem, 9vw, 7rem)", lineHeight: 1.35, padding: "0.05em 0.35em" }}>
-                Harinika
+                Shashank
               </span>
 
               <div className="hero-title-word opacity-0 flex items-center gap-4 my-0.5">
@@ -325,7 +325,7 @@ export default function Hero() {
 
               <span className="hero-title-word font-script shimmer-text opacity-0 block"
                 style={{ fontSize: "clamp(3rem, 9vw, 7rem)", lineHeight: 1.35, padding: "0.05em 0.35em" }}>
-                Shashank
+                Harinika
               </span>
             </h1>
 

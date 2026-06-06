@@ -82,7 +82,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
 
         {/* Monogram — Great Vibes Script Monogram with Moving Shimmer Gradient */}
         <div className="font-script select-none leading-none text-center px-12 py-4 shimmer-text" style={{ fontSize: "clamp(5rem, 15vw, 9.5rem)" }}>
-          H &amp; S
+          S &amp; H
         </div>
 
         {/* Thin ornament line */}

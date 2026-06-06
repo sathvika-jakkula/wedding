@@ -22,7 +22,7 @@ export default function Finale() {
       <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
         {/* Elegant circular lockup */}
         <div className="w-24 h-24 rounded-full border border-dashed border-gold/40 flex items-center justify-center mb-8 relative" style={{ animation: "spin 35s linear infinite" }}>
-          <div className="absolute font-script text-gold text-4xl transform -rotate-12">H&amp;S</div>
+          <div className="absolute font-script text-gold text-4xl transform -rotate-12">S&amp;H</div>
         </div>
 
         <p className="font-sans tracking-[0.5em] text-sage uppercase text-[10px] mb-4 font-semibold">
