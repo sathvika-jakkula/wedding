@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Poppins, Great_Vibes, Pinyon_Script } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  Poppins,
+  Great_Vibes,
+  Pinyon_Script,
+} from "next/font/google";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -28,8 +33,9 @@ const pinyonScript = Pinyon_Script({
 });
 
 export const metadata: Metadata = {
-  title: "Harinika & Shashank - Wedding",
-  description: "Join us in celebrating the wedding of Harinika & Shashank on June 25, 2026.",
+  title: "Harnika & Shashank - Wedding",
+  description:
+    "Join us in celebrating the wedding of Harnika & Shashank on June 25, 2026.",
 };
 
 export default function RootLayout({

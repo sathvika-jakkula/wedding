@@ -168,7 +168,10 @@ export default function Hero() {
             className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4"
           >
             {/* Monogram — Great Vibes Script Monogram with Moving Shimmer Gradient */}
-            <div className="font-script select-none leading-none text-center px-12 py-4 mb-6 shimmer-text" style={{ fontSize: "clamp(4.5rem, 12vw, 8.5rem)" }}>
+            <div
+              className="font-script select-none leading-none text-center px-12 py-4 mb-6 shimmer-text"
+              style={{ fontSize: "clamp(4.5rem, 12vw, 8.5rem)" }}
+            >
               S &amp; H
             </div>
 
@@ -177,18 +180,36 @@ export default function Hero() {
             </p>
 
             {/* Premium play button with spinning outer ornament */}
-            <div className="relative group mb-8 cursor-pointer" onClick={handleOpen}>
+            <div
+              className="relative group mb-8 cursor-pointer"
+              onClick={handleOpen}
+            >
               {/* Outer decorative gold ring */}
               <div className="absolute -inset-4 rounded-full border border-gold/20 scale-90 group-hover:scale-110 group-hover:border-gold/40 transition-all duration-700 ease-out pointer-events-none" />
-              <div className="absolute -inset-2 rounded-full border border-dashed border-sage/35 opacity-60 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{ animation: "spin 25s linear infinite" }} />
-              
+              <div
+                className="absolute -inset-2 rounded-full border border-dashed border-sage/35 opacity-60 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                style={{ animation: "spin 25s linear infinite" }}
+              />
+
               <button
                 aria-label="Open the invitation video"
                 className="relative flex items-center justify-center w-20 h-20 rounded-full border border-beige/30 group-hover:border-gold bg-white/5 group-hover:bg-white/10 backdrop-blur-sm transition-all duration-500 shadow-[0_0_50px_rgba(198,168,124,0.15)] group-hover:shadow-[0_0_60px_rgba(198,168,124,0.35)]"
               >
-                <svg width="22" height="24" viewBox="0 0 22 24" fill="none" className="ml-1.5 transition-transform duration-500 group-hover:scale-110">
-                  <path d="M2 2L20 12L2 22V2Z" fill="#c6a87c" fillOpacity="0.85"
-                    stroke="#c6a87c" strokeWidth="1" strokeLinejoin="round"/>
+                <svg
+                  width="22"
+                  height="24"
+                  viewBox="0 0 22 24"
+                  fill="none"
+                  className="ml-1.5 transition-transform duration-500 group-hover:scale-110"
+                >
+                  <path
+                    d="M2 2L20 12L2 22V2Z"
+                    fill="#c6a87c"
+                    fillOpacity="0.85"
+                    stroke="#c6a87c"
+                    strokeWidth="1"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </button>
             </div>
@@ -202,7 +223,9 @@ export default function Hero() {
 
             {/* Scroll hint */}
             <div className="absolute bottom-10 flex flex-col items-center gap-2">
-              <span className="text-[9px] tracking-[0.3em] text-beige/20 uppercase">scroll to explore</span>
+              <span className="text-[9px] tracking-[0.3em] text-beige/20 uppercase">
+                scroll to explore
+              </span>
               <div className="w-[1px] h-10 bg-beige/10 overflow-hidden">
                 <div className="w-full h-1/2 bg-beige/30 animate-slide-down" />
               </div>
@@ -236,21 +259,42 @@ export default function Hero() {
             {/* Celebration background lights & bokeh */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
               {/* Pulsing colored ambient glows */}
-              <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-gold/15 blur-[120px] animate-pulse-glow" style={{ animationDuration: "8s" }} />
-              <div className="absolute bottom-[-10%] right-[-10%] w-[55%] h-[55%] rounded-full bg-sage/12 blur-[130px] animate-pulse-glow" style={{ animationDuration: "10s" }} />
-              <div className="absolute top-[40%] right-[-5%] w-[35%] h-[35%] rounded-full bg-gold/8 blur-[100px] animate-pulse-glow" style={{ animationDuration: "12s" }} />
+              <div
+                className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-gold/15 blur-[120px] animate-pulse-glow"
+                style={{ animationDuration: "8s" }}
+              />
+              <div
+                className="absolute bottom-[-10%] right-[-10%] w-[55%] h-[55%] rounded-full bg-sage/12 blur-[130px] animate-pulse-glow"
+                style={{ animationDuration: "10s" }}
+              />
+              <div
+                className="absolute top-[40%] right-[-5%] w-[35%] h-[35%] rounded-full bg-gold/8 blur-[100px] animate-pulse-glow"
+                style={{ animationDuration: "12s" }}
+              />
 
               {/* Individual floating bokeh celebration light orbs */}
               <div className="absolute top-[15%] left-[20%] w-16 h-16 rounded-full bg-gold/25 blur-[12px] animate-float-1" />
               <div className="absolute top-[70%] left-[10%] w-24 h-24 rounded-full bg-sage/15 blur-[16px] animate-float-2" />
               <div className="absolute top-[25%] right-[15%] w-20 h-20 rounded-full bg-gold/20 blur-[14px] animate-float-3" />
-              <div className="absolute bottom-[20%] right-[30%] w-28 h-28 rounded-full bg-sage/20 blur-[20px] animate-float-1" style={{ animationDelay: "-3s" }} />
-              <div className="absolute top-[50%] left-[45%] w-12 h-12 rounded-full bg-gold/30 blur-[8px] animate-float-2" style={{ animationDelay: "-6s" }} />
-              
+              <div
+                className="absolute bottom-[20%] right-[30%] w-28 h-28 rounded-full bg-sage/20 blur-[20px] animate-float-1"
+                style={{ animationDelay: "-3s" }}
+              />
+              <div
+                className="absolute top-[50%] left-[45%] w-12 h-12 rounded-full bg-gold/30 blur-[8px] animate-float-2"
+                style={{ animationDelay: "-6s" }}
+              />
+
               {/* Additional tiny golden sparkles */}
               <div className="absolute top-[30%] left-[30%] w-2 h-2 rounded-full bg-gold/60 blur-[1px] animate-pulse" />
-              <div className="absolute top-[60%] right-[25%] w-3 h-3 rounded-full bg-gold/50 blur-[1px] animate-pulse" style={{ animationDelay: "1s" }} />
-              <div className="absolute bottom-[35%] left-[15%] w-2.5 h-2.5 rounded-full bg-gold/40 blur-[1px] animate-pulse" style={{ animationDelay: "0.5s" }} />
+              <div
+                className="absolute top-[60%] right-[25%] w-3 h-3 rounded-full bg-gold/50 blur-[1px] animate-pulse"
+                style={{ animationDelay: "1s" }}
+              />
+              <div
+                className="absolute bottom-[35%] left-[15%] w-2.5 h-2.5 rounded-full bg-gold/40 blur-[1px] animate-pulse"
+                style={{ animationDelay: "0.5s" }}
+              />
             </div>
 
             {/* Video card */}
@@ -312,20 +356,34 @@ export default function Hero() {
 
             {/* Names stacked — script font, viewport-relative so they never clip */}
             <h1 className="flex flex-col items-center mb-4 leading-none">
-              <span className="hero-title-word font-script shimmer-text opacity-0 block"
-                style={{ fontSize: "clamp(3rem, 9vw, 7rem)", lineHeight: 1.35, padding: "0.05em 0.35em" }}>
+              <span
+                className="hero-title-word font-script shimmer-text opacity-0 block"
+                style={{
+                  fontSize: "clamp(3rem, 9vw, 7rem)",
+                  lineHeight: 1.35,
+                  padding: "0.05em 0.35em",
+                }}
+              >
                 Shashank
               </span>
 
               <div className="hero-title-word opacity-0 flex items-center gap-4 my-0.5">
                 <div className="w-10 h-[1px] bg-gradient-to-r from-transparent to-gold/35" />
-                <span className="font-serif text-lg md:text-xl text-gold/55 italic tracking-[0.2em]">and</span>
+                <span className="font-serif text-lg md:text-xl text-gold/55 italic tracking-[0.2em]">
+                  and
+                </span>
                 <div className="w-10 h-[1px] bg-gradient-to-l from-transparent to-gold/35" />
               </div>
 
-              <span className="hero-title-word font-script shimmer-text opacity-0 block"
-                style={{ fontSize: "clamp(3rem, 9vw, 7rem)", lineHeight: 1.35, padding: "0.05em 0.35em" }}>
-                Harinika
+              <span
+                className="hero-title-word font-script shimmer-text opacity-0 block"
+                style={{
+                  fontSize: "clamp(3rem, 9vw, 7rem)",
+                  lineHeight: 1.35,
+                  padding: "0.05em 0.35em",
+                }}
+              >
+                Harnika
               </span>
             </h1>
 

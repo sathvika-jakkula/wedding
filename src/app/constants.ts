@@ -1,23 +1,26 @@
 export const coupleData = {
-  names: "Shashank & Harinika",
+  names: "Shashank & Harnika",
   story: [
     {
       year: "2020",
       title: "The First Hello",
       image: "/romantic_lights.jpeg",
-      description: "A chance encounter that neither of them could have predicted — the moment two worlds gently collided.",
+      description:
+        "A chance encounter that neither of them could have predicted — the moment two worlds gently collided.",
     },
     {
       year: "2022",
       title: "Growing Together",
       image: "/romantic_lights_2.jpeg",
-      description: "Through every season, they found in each other a home, a laughter, and a quiet forever.",
+      description:
+        "Through every season, they found in each other a home, a laughter, and a quiet forever.",
     },
     {
       year: "2024",
       title: "The Promise",
       image: "/romantic_wall.jpeg",
-      description: "Under a sky full of stars, Shashank asked the question — and Harinika said yes.",
+      description:
+        "Under a sky full of stars, Shashank asked the question — and Harnika said yes.",
     },
     {
       year: "2026",
@@ -29,7 +32,8 @@ export const coupleData = {
   weddingDate: "June 25, 2026",
   weddingTime: "8:38 AM",
   location: "R.R. Garden's, Godhavarkhani, Ramagundam",
-  locationFull: "R.R. Garden's, Mathangi Colony, FCI X Road, Godhavarkhani, Mdl Ramagundam, Peddapally Dist.",
+  locationFull:
+    "R.R. Garden's, Mathangi Colony, FCI X Road, Godhavarkhani, Mdl Ramagundam, Peddapally Dist.",
   gallery: [
     "/romantic_wall.jpeg",
     "/boat_ride_2.jpeg",
@@ -38,7 +42,7 @@ export const coupleData = {
     "/window_silhouette.jpeg",
     "/romantic_lights_2.jpeg",
     "/dramatic_dip.jpeg",
-    "/campfire.jpeg"
+    "/campfire.jpeg",
   ],
   events: [
     {
@@ -46,28 +50,32 @@ export const coupleData = {
       time: "9:00 AM",
       date: "June 24",
       image: "/haldi_event.png",
-      description: "A morning of colors, laughter, and blessings as we kickstart the wedding festivities."
+      description:
+        "A morning of colors, laughter, and blessings as we kickstart the wedding festivities.",
     },
     {
       title: "Sangeet Night",
       time: "7:00 PM",
       date: "June 24",
       image: "/sangeet_event.png",
-      description: "An evening filled with music, dance performances, and celebration under the stars."
+      description:
+        "An evening filled with music, dance performances, and celebration under the stars.",
     },
     {
       title: "Wedding Ceremony",
       time: "8:38 AM",
       date: "June 25",
       image: "/wedding_event.png",
-      description: "The auspicious moments where we take our vows and become one forever."
+      description:
+        "The auspicious moments where we take our vows and become one forever.",
     },
     {
       title: "Grand Reception",
       time: "7:00 PM",
       date: "June 25",
       image: "/reception_event.png",
-      description: "Join us for a royal feast and celebration to conclude our beautiful wedding journey."
-    }
-  ]
+      description:
+        "Join us for a royal feast and celebration to conclude our beautiful wedding journey.",
+    },
+  ],
 };
