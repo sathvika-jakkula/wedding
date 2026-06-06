@@ -47,19 +47,19 @@ export const coupleData = {
   events: [
     {
       title: "Haldi Ceremony",
-      time: "9:00 AM",
+      time: "2:00 PM",
       date: "June 24",
       image: "/haldi_event.png",
       description:
         "A morning of colors, laughter, and blessings as we kickstart the wedding festivities.",
     },
     {
-      title: "Sangeet Night",
+      title: "Pre-Wedding Ceremony",
       time: "7:00 PM",
       date: "June 24",
       image: "/sangeet_event.png",
       description:
-        "An evening filled with music, dance performances, and celebration under the stars.",
+        "A beautiful gathering of family and friends for pre-wedding rituals and celebrations.",
     },
     {
       title: "Wedding Ceremony",
@@ -70,12 +70,12 @@ export const coupleData = {
         "The auspicious moments where we take our vows and become one forever.",
     },
     {
-      title: "Grand Reception",
-      time: "7:00 PM",
-      date: "June 25",
-      image: "/reception_event.png",
+      title: "Sathyanaraya Swamy Pooja",
+      time: "9:00 AM",
+      date: "June 27",
+      image: "/pooja_event.png",
       description:
-        "Join us for a royal feast and celebration to conclude our beautiful wedding journey.",
+        "A sacred and auspicious Sathyanarayana Swamy Pooja to seek blessings for our new beginning.",
     },
   ],
 };
