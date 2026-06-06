@@ -45,24 +45,28 @@ export const coupleData = {
       title: "Haldi Ceremony",
       time: "9:00 AM",
       date: "June 24",
+      image: "/haldi_event.png",
       description: "A morning of colors, laughter, and blessings as we kickstart the wedding festivities."
     },
     {
       title: "Sangeet Night",
       time: "7:00 PM",
       date: "June 24",
+      image: "/sangeet_event.png",
       description: "An evening filled with music, dance performances, and celebration under the stars."
     },
     {
       title: "Wedding Ceremony",
       time: "8:38 AM",
       date: "June 25",
+      image: "/wedding_event.png",
       description: "The auspicious moments where we take our vows and become one forever."
     },
     {
       title: "Grand Reception",
       time: "7:00 PM",
       date: "June 25",
+      image: "/reception_event.png",
       description: "Join us for a royal feast and celebration to conclude our beautiful wedding journey."
     }
   ]

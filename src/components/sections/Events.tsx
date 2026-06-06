@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { gsap, useGSAP } from "@/utils/gsap";
 import { coupleData } from "@/app/constants";
 import SectionTeaser from "@/components/effects/SectionTeaser";
@@ -83,14 +84,28 @@ export default function Events() {
               <div className="absolute bottom-2 right-2 w-4 h-4 border-b border-r border-sage/25 rounded-br-sm" />
 
               {/* Event number */}
-              <div className="absolute top-4 right-6 font-sans text-[9px] text-sage/20 tracking-widest">
+              <div className="absolute top-4 right-6 font-sans text-[9px] text-sage/20 tracking-widest z-20">
                 {String(index + 1).padStart(2, "0")}
               </div>
+
+              {/* Event Image */}
+              {event.image && (
+                <div className="relative w-full h-36 rounded-xl overflow-hidden mb-6 border border-sage/20 shadow-md group-hover:border-gold/30 transition-colors duration-500 z-10 shrink-0">
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                  />
+                  {/* Soft dark overlay on image */}
+                  <div className="absolute inset-0 bg-[#091a0d]/25 group-hover:bg-[#091a0d]/10 transition-colors duration-500" />
+                </div>
+              )}
 
               <div className="text-gold font-sans font-semibold tracking-widest text-sm mb-3 relative z-10">
                 {event.date}
               </div>
-              <h3 className="font-serif text-2xl md:text-3xl mb-4 text-[#e8f5ec] relative z-10 leading-tight">
+              <h3 className="font-serif text-2xl mb-4 text-[#e8f5ec] relative z-10 leading-tight">
                 {event.title}
               </h3>
               <div className="w-8 h-[1px] bg-sage/30 mb-4 relative z-10" />

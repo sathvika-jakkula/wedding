@@ -13,24 +13,13 @@ export default function Gallery() {
 
   useGSAP(() => {
     gsap.fromTo(".gallery-img",
-      { opacity: 0, scale: 0.85, y: 70, filter: "blur(10px)" },
+      { opacity: 0, scale: 0.9, y: 50, filter: "blur(6px)" },
       {
         opacity: 1, scale: 1, y: 0, filter: "blur(0px)",
-        duration: 1.2, stagger: 0.09, ease: "back.out(1.3)",
-        scrollTrigger: { trigger: containerRef.current, start: "top 70%" },
+        duration: 1.1, stagger: 0.07, ease: "power3.out",
+        scrollTrigger: { trigger: containerRef.current, start: "top 75%" },
       }
     );
-
-    gsap.utils.toArray(".gallery-img").forEach((img: any, i: number) => {
-      gsap.to(img, {
-        yPercent: i % 2 === 0 ? 10 : -10,
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top bottom", end: "bottom top", scrub: true,
-        },
-      });
-    });
   }, { scope: containerRef });
 
   return (
@@ -59,25 +48,27 @@ export default function Gallery() {
           </div>
         </div>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
           {coupleData.gallery.map((src, index) => (
             <div
               key={index}
-              className="gallery-img relative overflow-hidden rounded-2xl cursor-pointer group break-inside-avoid border border-sage/12 hover:border-sage/35 transition-all duration-500 shadow-sm hover:shadow-xl hover:shadow-sage/10"
+              className="gallery-img inline-block w-full mb-6 relative overflow-hidden rounded-2xl cursor-pointer group break-inside-avoid p-2 bg-white/95 border border-gold/20 transition-all duration-500 shadow-[0_4px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_24px_rgba(107,168,122,0.12)] hover:scale-[1.02] hover:border-gold/50"
               onClick={() => setSelectedImage(src)}
             >
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-[#0b1f12]/15 group-hover:bg-transparent transition-colors duration-600 z-10" />
-              {/* Image number on hover */}
-              <div className="absolute bottom-3 right-3 z-20 opacity-0 group-hover:opacity-100 transition-all duration-400 font-sans text-[9px] tracking-[0.4em] text-mint/80 uppercase bg-[#0b1f12]/50 px-2 py-1 rounded-full">
-                {String(index + 1).padStart(2, "0")} / {coupleData.gallery.length}
+              <div className="relative overflow-hidden rounded-xl">
+                {/* Gentle overlay */}
+                <div className="absolute inset-0 bg-black/[0.03] group-hover:bg-transparent transition-colors duration-500 z-10" />
+                {/* Image number on hover */}
+                <div className="absolute bottom-3 right-3 z-20 opacity-0 group-hover:opacity-100 transition-all duration-400 font-sans text-[9px] tracking-[0.4em] text-white/90 uppercase bg-[#091a0d]/65 px-2.5 py-1 rounded-full backdrop-blur-sm">
+                  {String(index + 1).padStart(2, "0")} / {coupleData.gallery.length}
+                </div>
+                <Image
+                  src={src}
+                  alt={`Gallery Image ${index + 1}`}
+                  width={800} height={1200}
+                  className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+                />
               </div>
-              <Image
-                src={src}
-                alt={`Gallery Image ${index + 1}`}
-                width={800} height={1200}
-                className="w-full h-auto object-cover group-hover:scale-[1.06] transition-all duration-700 ease-out grayscale-[60%] group-hover:grayscale-0"
-              />
             </div>
           ))}
         </div>
