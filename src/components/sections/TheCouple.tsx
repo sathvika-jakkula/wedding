@@ -237,10 +237,10 @@ export default function TheCouple() {
                 style={{ height: "340px", width: "260px" }}
               >
                 <Image
-                  src="/bride.jpeg"
+                  src="/bride_custom.jpg"
                   alt="The Bride"
                   fill
-                  className="object-cover object-center scale-[1.78] transition-transform duration-700 hover:scale-[1.9]"
+                  className="object-cover object-center transition-transform duration-700 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0d1a0f]/45 via-transparent to-transparent" />
               </div>
